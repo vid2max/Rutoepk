@@ -179,18 +179,20 @@
             window.open(url, '_blank');
         }
 
-        // Database 10 Video (Diperbarui dengan gambar dan video baru)
+        // Database Video yang diperbarui dengan link baru
         const videosData = [
-            { id: 1, title: "Makin cantik saat mendesah", video: "https://trbnvideo.live/e/VfvqOlpg", gambar: "https://i.ibb.co/mVVXfCgd/1794583724710.jpg", durasi: "5:21", cat: "Viral" },
-            { id: 2, title: "Tante sange minta dipuasin", video: "https://trbnvideo.live/e/wIjrz3nA", gambar: "https://i.ibb.co/nq6QkZVY/1794583732461.jpg", durasi: "8:18", cat: "Janda" },
-            { id: 3, title: "Janda kirim pap ke ayang", video: "https://trbnvideo.live/e/08AvWJzA", gambar: "https://i.ibb.co/VYDn1rXK/1794583813048.jpg", durasi: "7:58", cat: "Janda" },
-            { id: 4, title: "ABG masih sempit", video: "https://trbnvideo.live/e/mWvFTPn1", gambar: "https://i.ibb.co/svfB7gKg/1794583850902.jpg", durasi: "8:06", cat: "ABG" },
-            { id: 5, title: "Puasin selingkuhan crot dimuka", video: "https://trbnvideo.live/e/W4qMM2Vq", gambar: "https://i.ibb.co/B5w2998M/1794587343921.jpg", durasi: "4:47", cat: "Viral" },
-            { id: 6, title: "Masih dengan selingkuhan", video: "https://trbnvideo.live/e/YR0CXAm6", gambar: "https://i.ibb.co/GQWSbDn1/1794588046387.jpg", durasi: "1:23", cat: "Viral" },
-            { id: 7, title: "Janda muda menikmati goyangan brondong", video: "https://trbnvideo.live/e/gfIjHgaA", gambar: "https://i.ibb.co/tMcsWdrQ/1794590507166.jpg", durasi: "3:20", cat: "Janda" },
-            { id: 8, title: "Masih imut sekali", video: "https://trbnvideo.live/e/k9AJPVXz", gambar: "https://i.ibb.co/BKThCtfh/1794590512855.jpg", durasi: "2:28", cat: "ABG" },
-            { id: 9, title: "Jilbab terbaik", video: "https://trbnvideo.live/e/YRPKr3p3", gambar: "https://i.ibb.co/Xf5cDLg1/1794590517081.jpg", durasi: "5:52", cat: "Jilbab" },
-            { id: 10, title: "Perawat jilbab eksib di RS", video: "https://trbnvideo.live/e/H6jexcu2", gambar: "https://i.ibb.co/m5xHcqKY/1794590525258.jpg", durasi: "9:33", cat: "Jilbab" }
+            { id: 1, title: "Makin cantik saat mendesah", video: "https://playmogo.com/e/dfbxme4m8dhm", gambar: "https://i.ibb.co/mVVXfCgd/1794583724710.jpg", durasi: "5:21", cat: "Viral" },
+            { id: 2, title: "Tante sange minta dipuasin", video: "https://playmogo.com/e/6gwlxc8abam9", gambar: "https://i.ibb.co/nq6QkZVY/1794583732461.jpg", durasi: "8:18", cat: "Janda" },
+            { id: 3, title: "Janda kirim pap ke ayang", video: "https://playmogo.com/e/d907jc4klz22", gambar: "https://i.ibb.co/VYDn1rXK/1794583813048.jpg", durasi: "7:58", cat: "Janda" },
+            { id: 4, title: "ABG masih sempit", video: "https://playmogo.com/e/ehnefdyiu0nq", gambar: "https://i.ibb.co/svfB7gKg/1794583850902.jpg", durasi: "8:06", cat: "ABG" },
+            { id: 5, title: "Puasin selingkuhan crot dimuka", video: "https://playmogo.com/e/l9s2yos0k9ix", gambar: "https://i.ibb.co/B5w2998M/1794587343921.jpg", durasi: "4:47", cat: "Viral" },
+            { id: 6, title: "Masih dengan selingkuhan", video: "https://playmogo.com/e/rfi9rk10ueqf", gambar: "https://i.ibb.co/GQWSbDn1/1794588046387.jpg", durasi: "1:23", cat: "Viral" },
+            { id: 7, title: "Janda muda menikmati goyangan brondong", video: "https://playmogo.com/e/yhqio0yfppk4", gambar: "https://i.ibb.co/tMcsWdrQ/1794590507166.jpg", durasi: "3:20", cat: "Janda" },
+            { id: 8, title: "Masih imut sekali", video: "https://playmogo.com/e/fuxcm33f1876", gambar: "https://i.ibb.co/BKThCtfh/1794590512855.jpg", durasi: "2:28", cat: "ABG" },
+            { id: 9, title: "Jilbab terbaik", video: "https://playmogo.com/e/69g8imauk3ol", gambar: "https://i.ibb.co/Xf5cDLg1/1794590517081.jpg", durasi: "5:52", cat: "Jilbab" },
+            { id: 10, title: "Perawat jilbab eksib di RS", video: "https://playmogo.com/e/vdjazbdkjhye", gambar: "https://i.ibb.co/m5xHcqKY/1794590525258.jpg", durasi: "9:33", cat: "Jilbab" },
+            { id: 11, title: "Goyangan hot malam jumat", video: "https://playmogo.com/e/gl39h79i6plf", gambar: "https://i.ibb.co/mVVXfCgd/1794583724710.jpg", durasi: "6:15", cat: "Viral" },
+            { id: 12, title: "Spesial malam minggu", video: "https://playmogo.com/e/6l62537sowf9", gambar: "https://i.ibb.co/nq6QkZVY/1794583732461.jpg", durasi: "7:40", cat: "ABG" }
         ];
 
         // Assets Iklan 1, 2, 3 (3 Siklus / Sesi)
