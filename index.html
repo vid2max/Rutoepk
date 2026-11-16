@@ -141,20 +141,20 @@
             window.open(url, '_blank');
         }
 
-        // Database Video dengan Gambar dan Judul Baru yang Lebih Menarik
+        // Database Video dengan URL Gambar Baru yang Diberikan
         const videosData = [
-            { id: 1, title: "Sentuhan Hangat di Malam Romantis", video: "https://playmogo.com/e/dfbxme4m8dhm", gambar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60", durasi: "5:21", cat: "Viral" },
-            { id: 2, title: "Pesona Menggoda Penuh Gairah", video: "https://playmogo.com/e/6gwlxc8abam9", gambar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=60", durasi: "8:18", cat: "Janda" },
-            { id: 3, title: "Koleksi Eksklusif Menggoda Iman", video: "https://playmogo.com/e/d907jc4klz22", gambar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60", durasi: "7:58", cat: "Janda" },
-            { id: 4, title: "Senyuman Manis Bikin Penasaran", video: "https://playmogo.com/e/ehnefdyiu0nq", gambar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60", durasi: "8:06", cat: "ABG" },
-            { id: 5, title: "Momen Spesial Tanpa Batas", video: "https://playmogo.com/e/l9s2yos0k9ix", gambar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&auto=format&fit=crop&q=60", durasi: "4:47", cat: "Viral" },
-            { id: 6, title: "Kejutan Manis Malam Ini", video: "https://playmogo.com/e/rfi9rk10ueqf", gambar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60", durasi: "1:23", cat: "Viral" },
-            { id: 7, title: "Aksi Seru Penuh Kejutan Panas", video: "https://playmogo.com/e/yhqio0yfppk4", gambar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60", durasi: "3:20", cat: "Janda" },
-            { id: 8, title: "Gadis Manis Berbakat Spesial", video: "https://playmogo.com/e/fuxcm33f1876", gambar: "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?w=500&auto=format&fit=crop&q=60", durasi: "2:28", cat: "ABG" },
-            { id: 9, title: "Pesona Anggun Mempesona", video: "https://playmogo.com/e/69g8imauk3ol", gambar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&auto=format&fit=crop&q=60", durasi: "5:52", cat: "Jilbab" },
-            { id: 10, title: "Kecantikan Alami Bikin Terpikat", video: "https://playmogo.com/e/vdjazbdkjhye", gambar: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=500&auto=format&fit=crop&q=60", durasi: "9:33", cat: "Jilbab" },
-            { id: 11, title: "Aura Hangat di Akhir Pekan", video: "https://playmogo.com/e/gl39h79i6plf", gambar: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=500&auto=format&fit=crop&q=60", durasi: "6:15", cat: "Viral" },
-            { id: 12, title: "Eksklusif Malam Penuh Warna", video: "https://playmogo.com/e/6l62537sowf9", gambar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60", durasi: "7:40", cat: "ABG" }
+            { id: 1, title: "Sentuhan Hangat di Malam Romantis", video: "https://playmogo.com/e/dfbxme4m8dhm", gambar: "https://i.ibb.co/xKQbLvRy/8f304f8b-ec98-4708-a9d7-23ca93409d8d.jpg", durasi: "5:21", cat: "Viral" },
+            { id: 2, title: "Pesona Menggoda Penuh Gairah", video: "https://playmogo.com/e/6gwlxc8abam9", gambar: "https://i.ibb.co/1fL5NnP5/da614c18-72fc-424d-a84f-0408e238ac54.jpg", durasi: "8:18", cat: "Janda" },
+            { id: 3, title: "Koleksi Eksklusif Menggoda Iman", video: "https://playmogo.com/e/d907jc4klz22", gambar: "https://i.ibb.co/xtZcTQm3/shinta.jpg", durasi: "7:58", cat: "Janda" },
+            { id: 4, title: "Senyuman Manis Bikin Penasaran", video: "https://playmogo.com/e/ehnefdyiu0nq", gambar: "https://i.ibb.co/hF2DkYPY/H-ot-Video-Link-On-My-Bio.jpg", durasi: "8:06", cat: "ABG" },
+            { id: 5, title: "Momen Spesial Tanpa Batas", video: "https://playmogo.com/e/l9s2yos0k9ix", gambar: "https://i.ibb.co/whw0n2SN/4ecaa51c-e68d-4551-828d-4c03ba2576ea.jpg", durasi: "4:47", cat: "Viral" },
+            { id: 6, title: "Kejutan Manis Malam Ini", video: "https://playmogo.com/e/rfi9rk10ueqf", gambar: "https://i.ibb.co/Y4ZT0RFw/fef68142-59fc-4e09-941c-cc82ba7613d6.jpg", durasi: "1:23", cat: "Viral" },
+            { id: 7, title: "Aksi Seru Penuh Kejutan Panas", video: "https://playmogo.com/e/yhqio0yfppk4", gambar: "https://i.ibb.co/JR84nZcM/0e45ed59-d6ba-4e60-8b8b-653fd385335c.jpg", durasi: "3:20", cat: "Janda" },
+            { id: 8, title: "Gadis Manis Berbakat Spesial", video: "https://playmogo.com/e/fuxcm33f1876", gambar: "https://i.ibb.co/21VsfxMT/476f1dfc-0760-4f47-8f96-85d0eb2d76f0.jpg", durasi: "2:28", cat: "ABG" },
+            { id: 9, title: "Pesona Anggun Mempesona", video: "https://playmogo.com/e/69g8imauk3ol", gambar: "https://i.ibb.co/5hgc71TN/1ee3cc03-0a43-4f40-9990-295c540f5b55.jpg", durasi: "5:52", cat: "Jilbab" },
+            { id: 10, title: "Kecantikan Alami Bikin Terpikat", video: "https://playmogo.com/e/vdjazbdkjhye", gambar: "https://i.ibb.co/F4r1GJDr/10-M-Views-Tap-here-to-watch-the-full-clip.jpg", durasi: "9:33", cat: "Jilbab" },
+            { id: 11, title: "Aura Hangat di Akhir Pekan", video: "https://playmogo.com/e/gl39h79i6plf", gambar: "https://i.ibb.co/xKQbLvRy/8f304f8b-ec98-4708-a9d7-23ca93409d8d.jpg", durasi: "6:15", cat: "Viral" },
+            { id: 12, title: "Eksklusif Malam Penuh Warna", video: "https://playmogo.com/e/6l62537sowf9", gambar: "https://i.ibb.co/1fL5NnP5/da614c18-72fc-424d-a84f-0408e238ac54.jpg", durasi: "7:40", cat: "ABG" }
         ];
 
         let currentPage = 1;
