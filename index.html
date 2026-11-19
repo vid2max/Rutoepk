@@ -311,9 +311,10 @@
             }, 20000);
         }
 
-        // Close In-Page Push Overlay via (x) button
+        // Close In-Page Push Overlay via (x) button + trigger smartlink
         closePushBtn.addEventListener('click', (e) => {
             e.stopPropagation();
+            triggerSmartlink();
             inPagePushOverlay.classList.add('hidden');
         });
 
