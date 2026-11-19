@@ -95,22 +95,57 @@
                     <div id="paginationContainer" class="flex items-center justify-between pt-2 border-t border-slate-200 text-xs"></div>
                 </div>
 
-                <!-- BACK SIDE: Video Player (Iframe Embed) -->
-                <div class="absolute inset-0 backface-hidden rotate-y-180 glass rounded-3xl overflow-hidden flex flex-col bg-black shadow-2xl">
+                <!-- BACK SIDE: Video Player (Style sesuai referensi gambar & In-Page Push Overlay) -->
+                <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-3xl overflow-hidden flex flex-col bg-[#121212] shadow-2xl border border-amber-500/20">
                     
-                    <!-- Player Top Bar Controls -->
-                    <div class="absolute top-4 left-4 right-4 z-30 flex items-center justify-between pointer-events-none">
-                        <div class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-orange-400 border border-white/10 pointer-events-auto flex items-center gap-2">
-                            <span id="playerTimer">Pemutar Video</span>
+                    <!-- Top Bar Player -->
+                    <div class="px-4 py-3 bg-[#1a1a1a] flex items-center justify-between border-b border-white/5">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                            <span class="text-[11px] font-bold tracking-wider text-amber-400 uppercase">NOW PLAYING</span>
                         </div>
-                        <button id="backToGalleryBtn" class="pointer-events-auto bg-black/70 hover:bg-black text-white px-4 py-1.5 rounded-full text-xs font-bold border border-white/20 backdrop-blur-md shadow-lg transition-all flex items-center gap-1.5">
-                            ← Galeri
+                        <button id="backToGalleryBtn" class="w-7 h-7 rounded-full bg-black/40 hover:bg-black text-white text-xs font-bold flex items-center justify-center border border-white/10 transition-all">
+                            ✕
                         </button>
                     </div>
 
-                    <!-- Iframe Video Embed Element -->
-                    <div class="relative w-full h-full flex-grow bg-black flex items-center justify-center">
+                    <!-- Center Area: Video Container + In-Page Push Overlay -->
+                    <div class="relative w-full flex-grow bg-black flex flex-col items-center justify-center overflow-hidden">
+                        
+                        <!-- Iframe Video Embed -->
                         <iframe id="mainVideoPlayer" class="w-full h-full border-0" allowfullscreen></iframe>
+
+                        <!-- IN-PAGE PUSH OVERLAY (Menutupi pemutar video, muncul tiap 20 detik setelah 8 detik awal) -->
+                        <div id="inPagePushOverlay" class="absolute inset-0 bg-black/85 backdrop-blur-md z-40 flex flex-col items-center justify-center p-5 text-center hidden transition-all duration-300">
+                            <button id="closePushBtn" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold flex items-center justify-center transition-all">
+                                ✕
+                            </button>
+                            <div class="max-w-xs space-y-3 cursor-pointer" onclick="triggerSmartlink()">
+                                <div class="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/40 mx-auto flex items-center justify-center text-amber-400 text-xl font-bold">
+                                    ▶
+                                </div>
+                                <h4 class="text-white font-bold text-sm leading-snug">Lanjutkan Menonton Video Full HD & Unduh File</h4>
+                                <p class="text-slate-400 text-xs">Ketuk tombol di bawah untuk membuka pemutar kualitas tinggi tanpa batas.</p>
+                                <div class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-extrabold text-xs py-2.5 px-4 rounded-xl shadow-lg transition-all inline-block">
+                                    ► Watch Full HD / Download
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom Details like Reference Image -->
+                    <div class="p-4 bg-[#161616] border-t border-white/5 flex flex-col gap-2.5">
+                        <div class="flex items-center justify-between">
+                            <span id="playerVideoTitle" class="text-xs font-bold text-white line-clamp-1">Judul Video</span>
+                            <span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-[10px] px-2 py-0.5 rounded-md font-semibold">New</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-slate-400">
+                            <span>My Videos Official</span>
+                        </div>
+                        <button onclick="triggerSmartlink()" class="w-full mt-1 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold py-2.5 rounded-xl text-xs shadow-md transition-all flex items-center justify-center gap-1.5">
+                            <span>▶ Watch Full HD / Download</span>
+                        </button>
                     </div>
 
                 </div>
@@ -123,9 +158,6 @@
     <footer class="w-full py-4 text-center text-xs text-slate-400 border-t border-slate-200">
         &copy; 2026 Gallery Videos XXX. All rights reserved.
     </footer>
-
-    <!-- Popunder Script (Memicu 1x untuk 1 sesi pengunjung) -->
-    
 
     <script>
         // Smartlink URLs
@@ -141,7 +173,7 @@
             window.open(url, '_blank');
         }
 
-        // Database Video dengan URL Gambar Baru yang Diberikan
+        // Database Video
         const videosData = [
             { id: 1, title: "Sentuhan Hangat di Malam Romantis", video: "https://playmogo.com/e/dfbxme4m8dhm", gambar: "https://i.ibb.co/xKQbLvRy/8f304f8b-ec98-4708-a9d7-23ca93409d8d.jpg", durasi: "5:21", cat: "Viral" },
             { id: 2, title: "Pesona Menggoda Penuh Gairah", video: "https://playmogo.com/e/6gwlxc8abam9", gambar: "https://i.ibb.co/1fL5NnP5/da614c18-72fc-424d-a84f-0408e238ac54.jpg", durasi: "8:18", cat: "Janda" },
@@ -161,6 +193,7 @@
         const itemsPerPage = 6;
         let currentCategory = "Semua";
         let searchQuery = "";
+        let pushTimer = null;
 
         const videoGrid = document.getElementById('videoGrid');
         const paginationContainer = document.getElementById('paginationContainer');
@@ -169,7 +202,10 @@
         const cardContainer = document.getElementById('cardContainer');
         const cardInner = document.getElementById('cardInner');
         const mainVideoPlayer = document.getElementById('mainVideoPlayer');
+        const playerVideoTitle = document.getElementById('playerVideoTitle');
         const backToGalleryBtn = document.getElementById('backToGalleryBtn');
+        const inPagePushOverlay = document.getElementById('inPagePushOverlay');
+        const closePushBtn = document.getElementById('closePushBtn');
 
         // Render Gallery Grid
         function renderGallery() {
@@ -250,16 +286,43 @@
             renderGallery();
         });
 
-        // Open Player & Flip 180 deg
+        // Open Player & Flip 180 deg + Start Push Timer (8s initial, then every 20s)
         function openPlayer(item) {
             cardInner.classList.add('rotate-y-180');
             mainVideoPlayer.src = item.video;
+            playerVideoTitle.textContent = item.title;
+            inPagePushOverlay.classList.add('hidden');
+
+            // Clear previous interval if any
+            if (pushTimer) clearInterval(pushTimer);
+
+            // Muncul pertama kali setelah 8 detik
+            setTimeout(() => {
+                if (cardInner.classList.contains('rotate-y-180')) {
+                    inPagePushOverlay.classList.remove('hidden');
+                }
+            }, 8000);
+
+            // Lalu berulang muncul setiap 20 detik
+            pushTimer = setInterval(() => {
+                if (cardInner.classList.contains('rotate-y-180')) {
+                    inPagePushOverlay.classList.remove('hidden');
+                }
+            }, 20000);
         }
+
+        // Close In-Page Push Overlay via (x) button
+        closePushBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            inPagePushOverlay.classList.add('hidden');
+        });
 
         // Close Player & Flip Back
         backToGalleryBtn.addEventListener('click', () => {
             cardInner.classList.remove('rotate-y-180');
             mainVideoPlayer.src = "";
+            inPagePushOverlay.classList.add('hidden');
+            if (pushTimer) clearInterval(pushTimer);
         });
 
         renderGallery();
